@@ -13,8 +13,5 @@ The user can add a dish with a name, price and ingredients, when submitted, the 
 The screen that shows when menu button is clicked in screen 1
 The screen shows the list of added dishes, each element in the view only shows the name and the price, when clicked, will navigate the user to dish details screen, that will display that dish's details (name, price and ingredients), note that this screen isn't added in the wire frames, and is left for you to decide how it will look like
 
-## Screenshote
-![]()
-![]()
-![]()
+
 

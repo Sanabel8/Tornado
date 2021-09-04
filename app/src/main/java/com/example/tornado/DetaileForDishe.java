@@ -43,5 +43,8 @@ public class DetaileForDishe extends AppCompatActivity {
         TextView ingredentsForDish = findViewById(R.id.ingredintsOfDish);
         ingredentsForDish.setText(ingr);
 
+
+
+
     }
 }

@@ -8,12 +8,12 @@
     android:background="@drawable/add">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/ingredientText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ingredints"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+        app:layout_constraintBottom_toTopOf="@+id/editIng"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,13 +21,13 @@
         app:layout_constraintVertical_bias="0.97" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/d_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dish Price"
         android:textSize="20sp"
 
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/editPrice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,14 +35,14 @@
         app:layout_constraintVertical_bias="0.967" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/d_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:text="Dish Name"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +63,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -79,7 +79,7 @@
         app:layout_constraintVertical_bias="0.263" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -95,7 +95,7 @@
         app:layout_constraintVertical_bias="0.447" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/editIng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -115,7 +115,7 @@
         android:layout_width="116dp"
         android:layout_height="53dp"
         android:text="Home page"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/d_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Dish Page"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/d_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"

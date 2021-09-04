@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,14 +19,16 @@ public class AddDish extends AppCompatActivity {
         setContentView(R.layout.activity_add_dish);
 
 
-        Button topBtn =(Button) findViewById(R.id.goToMain);
+        Button topBtn = (Button) findViewById(R.id.goToMain);
         topBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent goToMain = new Intent(AddDish.this,MainActivity.class);
+                Intent goToMain = new Intent(AddDish.this, MainActivity.class);
                 startActivity(goToMain);
             }
         });
+
+
 
         Button addDishes = findViewById(R.id.submitBtn);
         addDishes.setOnClickListener(new View.OnClickListener() {
@@ -36,22 +39,31 @@ public class AddDish extends AppCompatActivity {
 
                 AppDatabase db = Room.databaseBuilder(getApplicationContext(),
                         AppDatabase.class, "dishDb").allowMainThreadQueries().build();
-                        DishDeo dishDeo = db.dishDeo();
+                DishDeo dishDeo = db.dishDeo();
 
 
-                            TextView dishName = findViewById(R.id.dishNameEntery);
-                            String name = dishName.getText().toString();
+                TextView nameForDish = findViewById(R.id.d_name);
+                EditText editNameOfDish = findViewById(R.id.editName);
+                String name = nameForDish.getText().toString();
 
-                            TextView dishPrice = findViewById(R.id.dishPriceEntery);
-                            int price = Integer.parseInt(dishPrice.getText().toString());
 
-                            TextView ingredients = findViewById(R.id.ingredientsEntery);
-                            String ingreds = ingredients.getText().toString();
+                TextView priceOfDish = findViewById(R.id.d_price);
+                EditText EditPriceForDish = findViewById(R.id.editPrice);
+                String price = priceOfDish.getText().toString();
 
-                            dishDao.insert(new Dish(name,price,ingreds));
 
-                            Intent goToAddDish = new Intent(AddDishActivity.this, MainActivity.class);
-                            startActivity(goToAddDish);
+                TextView ingredOfDish = findViewById(R.id.ingredientText);
+                EditText dishIng = findViewById(R.id.editIng);
+                String ingredients = ingredOfDish.getText().toString();
+
+
+//                Dish insertDishesToDb = new Dish(name, price, ingredients);
+//                dishDeo.insertDish(insertDishesToDb);
+
+
+                Intent goToAddDish = new Intent(AddDish.this, MainActivity.class);
+                startActivity(goToAddDish);
+
             }
         });
 
